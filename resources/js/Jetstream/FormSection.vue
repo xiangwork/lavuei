@@ -1,5 +1,5 @@
 <template>
-    <div class=" grid-cols-6 gap-4">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
         <jet-section-title>
             <template #title><slot name="title"></slot></template>
             <template #description><slot name="description"></slot></template>
