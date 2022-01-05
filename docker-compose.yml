@@ -27,6 +27,7 @@ services:
             - 'sailredis:/data'
         networks:
             - sail
+        restart: always
         healthcheck:
             test: [ "CMD", "redis-cli", "ping" ]
     mysql:
@@ -48,6 +49,7 @@ services:
             test: [ "CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}" ]
             retries: 3
             timeout: 5s
+        restart: always
 networks:
     sail:
         driver: bridge
